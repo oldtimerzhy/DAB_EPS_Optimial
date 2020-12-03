@@ -1,15 +1,24 @@
 # DAB_EPS_Optimial
 MATLAB
 zvs_range: 生成fig2,3,4， 给定k，p的软开关范围和取到最优质值。fig2为cond2，fig3为cond1，fig4为合并起来的软开关范围。
+
 zvs_range_figure: 给定k或p，生成全范围的移相角取值和电流大小。 同时还有一种输出是以角度（乘180度）表示，将small与cond1合并。颜色RBG: 1: FFFFCC, 2: CCFFFF, 3: FFCCCC
+
 traversal_zvs: 遍历程序，用来遍历是否cond1或cond2的所有移相角取值在给定范围内满足软开关。
+
 optimal_Imax_cond1_cond2: 生成最优取值下的Imax电流峰值3D图形。拟加入rms值的3D图
+
 zvs_range_cond1:专门负责研究cond1各个电流与sps峰值电流和eps自身rms电流的大小关系，选择最佳值。
+
 Imax_SPS: 为了展示随着k的增大，SPS的峰值电流会增大
+
 process_equation: 主要是为cond1的公式求解
 single_test: 是在实验中发现cond1中有时候并不能实现两个峰值相等，通过调整D1的大小来手动的降低其中一侧的电流peak值，使取值向左走。这个程序是单纯针对实验中110/120的情况，其他情况需要考虑p，k取值而导致计算公式上的不同。
+
 Irms_figure: 用来画出D1和P给定情况下的rms电流情况
+
 map_generation: 用来生成不同功率等级下的电流，同时还可以得到具体的电流值和功率值，可用来画map与实验数据对比。
+
 whole_range_optimal_curve: 在全范围内画出mode1,2的软开关范围，然后根据全功率范围最优值进行取点划线。
 zvs_range_decrease: 标出来每个边界对应的哪个点电流，与zvs_range没有代码上改动。
 zvs_range_decrease_1 :在figure4中生成减小的zvs范围。同时还能观察cond1中的各个peak电流大小关系。！！！！目前计算优化曲线的程序！！！
